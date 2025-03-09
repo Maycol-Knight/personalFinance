@@ -3,10 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+
+   
+
+
+    <!-- Formulario de Registro de Ingresos -->
+<form class="form ingresos bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold mb-4">Registrar Ingreso</h2>
     
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ingreso-monto">Monto</label>
+      <input class="form__input w-full p-2 border rounded" type="number" id="ingreso-monto" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ingreso-fecha">Fecha</label>
+      <input class="form__input w-full p-2 border rounded" type="date" id="ingreso-fecha" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ingreso-categoria">Categoría</label>
+      <select class="form__input w-full p-2 border rounded" id="ingreso-categoria">
+        <option>Sueldo</option>
+        <option>Bonos</option>
+        <option>Freelance</option>
+        <option>Regalo</option>
+        <option>Otros</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ingreso-medio">Medio</label>
+      <select class="form__input w-full p-2 border rounded" id="ingreso-medio">
+        <option>Efectivo</option>
+        <option>Transferencia</option>
+        <option>Cheque</option>
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Tarjeta de crédito</option>
+        <option>Tarjeta de débito</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ingreso-descripcion">Descripción (Opcional)</label>
+      <textarea class="form__input w-full p-2 border rounded" id="ingreso-descripcion" rows="3"></textarea>
+    </div>
+    
+    <button class="bg-blue-500 text-white p-2 rounded w-full">Registrar</button>
+  </form>
+  
+
+
+
+
+
+<!-- Formulario de Registro de Gastos -->
+<form class="form gastos bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold mb-4">Registrar Gasto</h2>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="gasto-monto">Monto</label>
+      <input class="form__input w-full p-2 border rounded" type="number" id="gasto-monto" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="gasto-fecha">Fecha</label>
+      <input class="form__input w-full p-2 border rounded" type="date" id="gasto-fecha" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="gasto-categoria">Categoría</label>
+      <select class="form__input w-full p-2 border rounded" id="gasto-categoria">
+        <option>Alimentación</option>
+        <option>Transporte</option>
+        <option>Vivienda</option>
+        <option>Entretenimiento</option>
+        <option>Salud</option>
+        <option>Educación</option>
+        <option>Otros</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="gasto-medio">Medio</label>
+      <select class="form__input w-full p-2 border rounded" id="gasto-medio">
+        <option>Efectivo</option>
+        <option>Transferencia</option>
+        <option>Cheque</option>
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Tarjeta de crédito</option>
+        <option>Tarjeta de débito</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="gasto-descripcion">Descripción (Opcional)</label>
+      <textarea class="form__input w-full p-2 border rounded" id="gasto-descripcion" rows="3"></textarea>
+    </div>
+    
+    <button class="bg-red-500 text-white p-2 rounded w-full">Registrar</button>
+  </form>
+
+  
+
+
+
+
+  <!-- Formulario de Registro de Ahorros -->
+<form class="form ahorros bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold mb-4">Registrar Ahorro</h2>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ahorro-monto">Monto</label>
+      <input class="form__input w-full p-2 border rounded" type="number" id="ahorro-monto" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ahorro-fecha">Fecha</label>
+      <input class="form__input w-full p-2 border rounded" type="date" id="ahorro-fecha" required>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ahorro-categoria">Categoría</label>
+      <select class="form__input w-full p-2 border rounded" id="ahorro-categoria">
+        <option>Cuenta de ahorros</option>
+        <option>Inversiones</option>
+        <option>Fondo de emergencia</option>
+        <option>Metas personales</option>
+        <option>Otros</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ahorro-medio">Medio</label>
+      <select class="form__input w-full p-2 border rounded" id="ahorro-medio">
+        <option>Efectivo</option>
+        <option>Transferencia</option>
+        <option>Cheque</option>
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Tarjeta de crédito</option>
+        <option>Tarjeta de débito</option>
+      </select>
+    </div>
+    
+    <div class="form__group mb-4">
+      <label class="form__label block font-medium" for="ahorro-descripcion">Descripción (Opcional)</label>
+      <textarea class="form__input w-full p-2 border rounded" id="ahorro-descripcion" rows="3"></textarea>
+    </div>
+    
+    <button class="bg-green-500 text-white p-2 rounded w-full">Registrar</button>
+  </form>
+  
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </body>
 </html>

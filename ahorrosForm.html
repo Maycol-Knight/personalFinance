@@ -24,6 +24,7 @@
         <div class="mt-6">
           <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
           <a href="#" class="block text-purple-400 mt-2">General</a>
+          
         </div>
 
         <!-- Organizando las secciones -->
@@ -31,9 +32,7 @@
           <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
           <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
           <a href="#" class="block mt-2 hover:text-purple-400">Categorias</a>
-          <a href="#" class="block mt-2 hover:text-purple-400"
-            >Formas de pago</a
-          >
+          <a href="#" class="block mt-2 hover:text-purple-400">Formas de pago</a>
         </div>
         <!-- Tenemos la sección ayuda -->
         <div class="mt-4">
@@ -68,23 +67,64 @@
 
         <!-- A ca ira mi contenido -->
         <main class="p-6 bg-gray-100">
-          <h2 class="text-xl font-bold">General</h2>
-          
+          <!-- <h2 class="text-xl font-bold">General</h2> -->
+
+          <div>
+            <!-- Formulario de Registro de Ahorros -->
+            <form class="form ahorros bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Registrar Ahorro</h2>
+                
+                <div class="form__group mb-4">
+                <label class="form__label block font-medium" for="ahorro-monto">Monto</label>
+                <input class="form__input w-full p-2 border rounded" type="number" id="ahorro-monto" required>
+                </div>
+                
+                <div class="form__group mb-4">
+                <label class="form__label block font-medium" for="ahorro-fecha">Fecha</label>
+                <input class="form__input w-full p-2 border rounded" type="date" id="ahorro-fecha" required>
+                </div>
+                
+                <div class="form__group mb-4">
+                <label class="form__label block font-medium" for="ahorro-categoria">Categoría</label>
+                <select class="form__input w-full p-2 border rounded" id="ahorro-categoria">
+                    <option>Cuenta de ahorros</option>
+                    <option>Inversiones</option>
+                    <option>Fondo de emergencia</option>
+                    <option>Metas personales</option>
+                    <option>Otros</option>
+                </select>
+                </div>
+                
+                <div class="form__group mb-4">
+                <label class="form__label block font-medium" for="ahorro-medio">Medio</label>
+                <select class="form__input w-full p-2 border rounded" id="ahorro-medio">
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                    <option>Cheque</option>
+                    <option>Yape</option>
+                    <option>Plin</option>
+                    <option>Tarjeta de crédito</option>
+                    <option>Tarjeta de débito</option>
+                </select>
+                </div>
+                
+                <div class="form__group mb-4">
+                <label class="form__label block font-medium" for="ahorro-descripcion">Descripción (Opcional)</label>
+                <textarea class="form__input w-full p-2 border rounded" id="ahorro-descripcion" rows="3"></textarea>
+                </div>
+                
+                <button class="bg-blue-500 text-white p-2 rounded w-full">Registrar</button>
+            </form>
+  
+
+            
+
+
+
+          </div>
 
           <!-- A ca iran los graficos y filtros que yo no hare jajaja-->
         </main>
-        <div class="p-5 flex space-x-4" >
-          <a href="ingresosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
-            Formulario de Ingresos
-          </a>
-          <a href="gastosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
-            Formulario de Gastos
-          </a>
-          <a href="ahorrosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
-            Formulario de Ahorros
-          </a>
-        </div>
-
       </div>
     </div>
 

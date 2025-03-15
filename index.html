@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="src/output.css" />
     <title>Document</title>
   </head>
@@ -10,7 +11,9 @@
     <div class="flex h-screen">
       <aside class="bg-black text-white w-64 p-4 hidden md:block">
         <div class="flex items-center gap-3">
-          <div class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg">
+          <div
+            class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
+          >
             <img
               src="https://static.vecteezy.com/system/resources/previews/024/553/853/non_2x/colorful-eagle-head-logo-pop-art-style-eagle-face-sticker-pastel-cute-colors-ai-generated-png.png"
               alt=""
@@ -23,13 +26,13 @@
           <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
           <a href="#" class="block text-purple-400 mt-2">General</a>
         </div>
-
         <!-- Organizando las secciones -->
         <div class="mt-4">
           <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
           <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
           <a href="#" class="block mt-2 hover:text-purple-400">Categorias</a>
-          <a href="#" class="block mt-2 hover:text-purple-400">Formas de pago</a
+          <a href="#" class="block mt-2 hover:text-purple-400"
+            >Formas de pago</a
           >
         </div>
         <!-- Tenemos la sección ayuda -->
@@ -43,7 +46,9 @@
 
       <!-- Contenido Principal -->
       <div class="flex-1">
-        <header class="bg-purple-600 text-white p-4 flex justify-between items-center">
+        <header
+          class="bg-purple-600 text-white p-4 flex justify-between items-center"
+        >
           <!-- Logo y titulo -->
           <div class="flex items-center gap-2">
             <img
@@ -64,44 +69,70 @@
         <!-- A ca ira mi contenido -->
         <main class="p-6 bg-gray-100">
           <h2 class="text-xl font-bold">General</h2>
-          <div class="bg-gray-100 p-4 rounded-lg shadow-lg mt-4 h-100">
-            Graficos
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="">
+              <canvas id="lineChart" class="col-span-1"></canvas>
+              <canvas id="doughnutChart" class="col-span-1"></canvas>
+            </div>
+            <div class="">
+              <canvas id="myChart" class="col-span-2"></canvas>
+            </div>
+            <!-- <div class="col-span-1 grid grid-cols-2 gap-4"></div>
+            <div class="cols-span2 grid grid-cols-2 gap-4"></div> -->
           </div>
-          <div class="grid grid-cols-6 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4">
-            <div class="col-span-3 bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+          <div
+            class="grid grid-cols-6 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4"
+          >
+            <div
+              class="col-span-3 bg-blue-500 text-white p-6 rounded-lg shadow-lg"
+            >
               <h3 class="text-lg font-bold">Balance</h3>
               <p class="text-xl">$34,680.00</p>
             </div>
-            <div class="col-span-3 bg-lime-500 text-white p-6 rounded-lg shadow-lg">
+            <div
+              class="col-span-3 bg-lime-500 text-white p-6 rounded-lg shadow-lg"
+            >
               <h3 class="text-lg font-bold">Ahorros</h3>
               <p class="text-xl">$0.00</p>
             </div>
-            <div class="col-span-3 bg-fuchsia-500 text-white p-6 rounded-lg shadow-lg">
+            <div
+              class="col-span-3 bg-fuchsia-500 text-white p-6 rounded-lg shadow-lg"
+            >
               <h3 class="text-lg font-bold">Ingresos</h3>
               <p class="text-xl">$40,000.00</p>
             </div>
-            <div class="col-span-3 bg-yellow-500 text-white p-6 rounded-lg shadow-lg">
+            <div
+              class="col-span-3 bg-yellow-500 text-white p-6 rounded-lg shadow-lg"
+            >
               <h3 class="text-lg font-bold">Gastos</h3>
               <p class="text-xl">$2,310.00</p>
             </div>
           </div>
-          <!-- A ca iran los graficos y filtros que yo no hare jajaja-->
         </main>
-        <div class="p-5 flex space-x-4" >
-          <a href="ingresosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
+        <div class="p-5 flex space-x-4">
+          <a
+            href="ingresosForm.html"
+            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
+          >
             Formulario de Ingresos
           </a>
-          <a href="gastosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
+          <a
+            href="gastosForm.html"
+            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
+          >
             Formulario de Gastos
           </a>
-          <a href="ahorrosForm.html" class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700">
+          <a
+            href="ahorrosForm.html"
+            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
+          >
             Formulario de Ahorros
           </a>
         </div>
-
       </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="graph.js"></script>
   </body>
 </html>

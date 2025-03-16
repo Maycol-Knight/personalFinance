@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <aside class=" h-screen fixed bg-black text-white w-64 p-4 hidden md:block">
+        <div class="flex items-center gap-3">
+          <div
+            class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/024/553/853/non_2x/colorful-eagle-head-logo-pop-art-style-eagle-face-sticker-pastel-cute-colors-ai-generated-png.png"
+              alt=""
+            />
+          </div>
+          <span class="text-lg">Grupo II</span>
+        </div>
+        <!-- Sección de panel de control -->
+        <div class="mt-6">
+          <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
+          <a href="index.html" class="block text-purple-400 mt-2">General</a>
+          
+        </div>
+
+        <!-- Organizando las secciones -->
+        <div class="mt-4">
+          <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
+          <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
+          <a href="categorias.html" class="block mt-2 hover:text-purple-400">Categorias</a>
+          <a href="#" class="block mt-2 hover:text-purple-400">Formas de pago</a>
+        </div>
+        <!-- Tenemos la sección ayuda -->
+        <div class="mt-4">
+          <h2 class="text-gray-400 uppercase text-sm">ayuda</h2>
+          <a href="#" class="block mt-2 hover:text-purple-400"
+            >Manual de usuario</a
+          >
+        </div>
+      </aside>
+
+      <!-- Contenido Principal -->
+      <div class="flex-1 ml-64 overflow-y-auto h-screen">
+        <header
+          class="bg-purple-600 text-white p-4 flex justify-between items-center"
+        >
+          <!-- Logo y titulo -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://cdn-icons-png.freepik.com/512/7892/7892280.png"
+              alt="Logo"
+              class="h-8"
+            />
+            <h1 class="text-xl font-bold">Pesitos</h1>
+          </div>
+
+          <!-- Aca ira mi menú amburguesita en moviles -->
+          <button class="text-white text-3xl md:hidden">&#9776;</button>
+
+          <!-- Aca ira mi icono de salir -->
+          <button class="text-white text-2xl btn btn-primary">&#10148;</button>
+        </header>
+
+        <main class="p-6 bg-gray-100">
+
+          <div>
+            
+                <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">Gestión de Categorías</h2>
+
+                    
+                    <!-- Botón para crear nueva categoría -->
+                    <button onclick="toggleModal()" class="btn btn--primary mb-4 bg-blue-500 text-white px-4 py-2 rounded">+ Nueva Categoría</button>
+
+                    <!-- Tabla de Categorías -->
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="border border-gray-300 px-4 py-2">Nombre</th>
+                                <th class="border border-gray-300 px-4 py-2">Tipo</th>
+                                <th class="border border-gray-300 px-4 py-2">Clasificación</th>
+                                <th class="border border-gray-300 px-4 py-2">Descripción</th>
+                                <th class="border border-gray-300 px-4 py-2">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border border-gray-300">
+                                <td class="border border-gray-300 px-4 py-2">Salario</td>
+                                <td class="border border-gray-300 px-4 py-2">Ingresos</td>
+                                <td class="border border-gray-300 px-4 py-2">Empleo Principal</td>
+                                <td class="border border-gray-300 px-4 py-2">Ingreso mensual del empleo</td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <button onclick="toggleEditModal()" class="btn btn--edit bg-yellow-500 text-white px-3 py-1 rounded">Editar</button>
+                                    <button onclick="toggleDeleteModal()" class="btn btn--delete bg-red-500 text-white px-3 py-1 rounded">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <!-- Modal para Nueva Categoría -->
+                    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden">
+   
+                      <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+                          <h3 class="text-xl font-bold mb-4">Nueva Categoría</h3>
+                          <form>
+                              <label class="block mb-2 font-semibold">Nombre:</label>
+                              <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese el nombre">
+                              
+                              <label class="block mb-2 font-semibold">Tipo:</label>
+                              <select class="w-full border border-gray-300 p-2 rounded mb-4">
+                                  <option value="ingresos">Ingresos</option>
+                                  <option value="gastos">Gastos</option>
+                                  <option value="ahorros">Ahorros</option>
+                                  <option value="tarjetas">Tarjetas</option>
+                              </select>
+                              
+                              <label class="block mb-2 font-semibold">Clasificación:</label>
+                              <select class="w-full border border-gray-300 p-2 rounded mb-4">
+                                  <option value="empleo">Empleo Principal</option>
+                                  <option value="independiente">Trabajo Independiente</option>
+                                  <option value="emprendimiento">Emprendimiento</option>
+                              </select>
+                              
+                              <label class="block mb-2 font-semibold">Descripción:</label>
+                              <textarea class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese una descripción"></textarea>
+                              
+                              <div class="flex justify-end gap-2">
+                                  <button type="button" onclick="toggleModal()" class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
+                                  <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Guardar</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+
+                  <!-- Modal para Editar Categoría -->
+                  <div id="edit-modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+                        <h3 class="text-xl font-bold mb-4">Editar Categoría</h3>
+                        <form>
+                            <label class="block mb-2 font-semibold">Nombre:</label>
+                            <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese el nombre" value="Nombre Existente">
+                            
+                            <label class="block mb-2 font-semibold">Tipo:</label>
+                            <select class="w-full border border-gray-300 p-2 rounded mb-4">
+                                <option value="ingresos">Ingresos</option>
+                                <option value="gastos" selected>Gastos</option>
+                                <option value="ahorros">Ahorros</option>
+                                <option value="tarjetas">Tarjetas</option>
+                            </select>
+                            
+                            <label class="block mb-2 font-semibold">Clasificación:</label>
+                            <select class="w-full border border-gray-300 p-2 rounded mb-4">
+                                <option value="empleo">Empleo Principal</option>
+                                <option value="independiente" selected>Trabajo Independiente</option>
+                                <option value="emprendimiento">Emprendimiento</option>
+                            </select>
+                            
+                            <label class="block mb-2 font-semibold">Descripción:</label>
+                            <textarea class="w-full border border-gray-300 p-2 rounded mb-4">Descripción existente...</textarea>
+                            
+                            <div class="flex justify-end gap-2">
+                                <button type="button" onclick="toggleEditModal()" class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
+                                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+
+                  <!-- Modal de Confirmación para Eliminar Categoría -->
+                  <div id="delete-modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80  hidden" onclick="toggleDeleteModal(event)">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center" onclick="event.stopPropagation()">
+                        <h3 class="text-xl font-bold mb-4 text-red-600">Eliminar Categoría</h3>
+                        <p class="mb-6 text-gray-700">¿Estás seguro de que deseas eliminar esta categoría? Esta acción no se puede deshacer.</p>
+                        
+                        <div class="flex justify-center gap-4">
+                            <button type="button" onclick="toggleDeleteModal()" class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
+                            <button type="button" class="bg-red-500 text-white px-4 py-2 rounded">Eliminar</button>
+                        </div>
+                    </div>
+                  </div>
+
+
+            </div>
+           </div>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

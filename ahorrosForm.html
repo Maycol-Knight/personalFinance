@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="flex h-screen">
-      <aside class="bg-black text-white w-64 p-4 hidden md:block">
+      <aside class=" h-screen fixed bg-black text-white w-64 p-4 hidden md:block">
         <div class="flex items-center gap-3">
           <div
             class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
@@ -23,7 +23,7 @@
         <!-- Sección de panel de control -->
         <div class="mt-6">
           <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
-          <a href="#" class="block text-purple-400 mt-2">General</a>
+          <a href="index.html" class="block text-purple-400 mt-2">General</a>
           
         </div>
 
@@ -31,7 +31,7 @@
         <div class="mt-4">
           <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
           <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
-          <a href="#" class="block mt-2 hover:text-purple-400">Categorias</a>
+          <a href="categorias.html" class="block mt-2 hover:text-purple-400">Categorias</a>
           <a href="#" class="block mt-2 hover:text-purple-400">Formas de pago</a>
         </div>
         <!-- Tenemos la sección ayuda -->
@@ -44,7 +44,7 @@
       </aside>
 
       <!-- Contenido Principal -->
-      <div class="flex-1">
+      <div class="flex-1 ml-64 overflow-y-auto h-screen">
         <header
           class="bg-purple-600 text-white p-4 flex justify-between items-center"
         >
@@ -72,7 +72,7 @@
           <div>
             <!-- Formulario de Registro de Ahorros -->
             <form class="form ahorros bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-bold mb-4">Registrar Ahorro</h2>
+                <h2 class="text-2xl font-bold mb-4">Registrar Ahorro</h2>
                 
                 <div class="form__group mb-4">
                 <label class="form__label block font-medium" for="ahorro-monto">Monto</label>

@@ -69,6 +69,52 @@
         <!-- A ca ira mi contenido -->
         <main class="p-6 bg-gray-100">
           <h2 class="text-xl font-bold">General</h2>
+          <div class="flex justify-between gap-8 max-sm:flex-col mt-8 mb-8">
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Fecha
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Mes
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="month"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Desde
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Hasta
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-4 mt-4">
             <div class="">
               <canvas id="lineChart" class="col-span-1"></canvas>

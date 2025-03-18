@@ -9,11 +9,17 @@
   </head>
   <body>
     <div class="flex h-screen">
-      <aside class="h-screen fixed bg-black text-white w-64 p-4 hidden md:block">
+      <aside
+        class="h-screen fixed bg-black text-white w-64 p-4 hidden md:block"
+      >
         <div class="flex items-center gap-3">
           <div
-            class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg">
-            <img src="https://static.vecteezy.com/system/resources/previews/024/553/853/non_2x/colorful-eagle-head-logo-pop-art-style-eagle-face-sticker-pastel-cute-colors-ai-generated-png.png" alt=""/>
+            class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/024/553/853/non_2x/colorful-eagle-head-logo-pop-art-style-eagle-face-sticker-pastel-cute-colors-ai-generated-png.png"
+              alt=""
+            />
           </div>
           <span class="text-lg">Grupo II</span>
         </div>
@@ -26,7 +32,9 @@
         <div class="mt-4">
           <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
           <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
-          <a href="categorias.html" class="block mt-2 hover:text-purple-400">Categorias</a>
+          <a href="categorias.html" class="block mt-2 hover:text-purple-400"
+            >Categorias</a
+          >
           <a href="#" class="block mt-2 hover:text-purple-400"
             >Formas de pago</a
           >
@@ -65,6 +73,52 @@
         <!-- A ca ira mi contenido -->
         <main class="p-6 bg-gray-100">
           <h2 class="text-xl font-bold">General</h2>
+          <div class="flex justify-between gap-8 max-sm:flex-col mt-8 mb-8">
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Fecha
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Mes
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="month"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Desde
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+            <div
+              class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
+            >
+              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+                Hasta
+              </p>
+              <input
+                class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
+                type="date"
+              />
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-4 mt-4">
             <div class="">
               <canvas id="lineChart" class="col-span-1"></canvas>

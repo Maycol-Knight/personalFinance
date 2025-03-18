@@ -119,13 +119,27 @@
               />
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-4 mt-4">
-            <div class="">
+          <div class="grid grid-cols-2 gap-8">
+            <div class="flex flex-col gap-8">
               <canvas id="lineChart" class="col-span-1"></canvas>
-              <canvas id="doughnutChart" class="col-span-1"></canvas>
+              <canvas id="doughnutChart" class="col-span-1 m-4"></canvas>
             </div>
-            <div class="">
+            <div class="flex flex-col gap-8">
               <canvas id="myChart" class="col-span-2"></canvas>
+              <div class="flex flex-col mt-10">
+                <div class="col-span-2 bg-blue-500 text-white p-6 shadow-lg">
+                  <h3 class="text-lg font-bold">Balance acumulado</h3>
+                  <p class="text-xl">$34,680.00</p>
+                </div>
+                <div class="col-span-2 bg-fuchsia-500 text-white p-6 shadow-lg">
+                  <h3 class="text-lg font-bold">Ingresos Acumulados</h3>
+                  <p class="text-xl">$0.00</p>
+                </div>
+                <div class="col-span-2 bg-yellow-500 text-white p-6 shadow-lg">
+                  <h3 class="text-lg font-bold">Gastos acumulados</h3>
+                  <p class="text-xl">$40,000.00</p>
+                </div>
+              </div>
             </div>
             <!-- <div class="col-span-1 grid grid-cols-2 gap-4"></div>
             <div class="cols-span2 grid grid-cols-2 gap-4"></div> -->

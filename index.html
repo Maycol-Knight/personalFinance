@@ -109,7 +109,8 @@
               <div class="flex justify-center mb-3 gap-2">
                 <button
                   id="ingreso"
-                  class="bg-gray-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  data-tipo="ingreso"
+                  class="js-tipo-boton bg-gray-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -131,7 +132,8 @@
                 </button>
                 <button
                   id="gasto"
-                  class="bg-gray-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  data-tipo="gasto"
+                  class="js-tipo-boton bg-gray-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -153,7 +155,8 @@
                 </button>
                 <button
                   id="ahorro"
-                  class="bg-gray-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  data-tipo="ahorro"
+                  class="js-tipo-boton bg-gray-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -176,7 +179,6 @@
                   Ahorro
                 </button>
               </div>
-
               <form
                 id="registroForm"
                 class="flex justify-center items-center flex-col"
@@ -184,7 +186,7 @@
                 <label for="cuenta" class="mb-1">Categoria:</label>
                 <input
                   type="text"
-                  id="cuenta"
+                  id="categoria"
                   class="bg-gray-700 text-white w-full p-2 rounded mb-4"
                   required
                 />

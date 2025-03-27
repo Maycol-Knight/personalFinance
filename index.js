@@ -11,7 +11,7 @@ function toggleDeleteModal() {
   document.getElementById("delete-modal").classList.toggle("hidden");
 }
 
-// modal
+// modal general
 const openModalBtn = document.getElementById("openModal");
 const closeModalBtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
@@ -47,7 +47,7 @@ const registrosIniciales = [
     categoria: "Comida",
     monto: 200,
     moneda: "PEN",
-    fecha: "2025-03-27",
+    fecha: "2025-01-27",
     nota: "Compra de supermercado",
   },
   {
@@ -55,7 +55,7 @@ const registrosIniciales = [
     categoria: "Ahorro",
     monto: 100,
     moneda: "PEN",
-    fecha: "2025-03-27",
+    fecha: "2025-02-27",
     nota: "Ahorro mensual",
   },
 ];
@@ -111,6 +111,28 @@ function capturarFecha() {
 }
 capturarFecha();
 
+// Capturar el evento click en filtro mes
+function capturarMes() {
+  const mesFilter = document.querySelector("#mesFilter");
+
+  mesFilter.addEventListener("change", (event) => {
+    const mesSeleccionado = event.target.value; // Formato: "YYYY-MM"
+    const [anioSeleccionado, mesSeleccionadoNumero] =
+      mesSeleccionado.split("-");
+
+    const registrosFiltradosPorMes = registrosIniciales.filter((registro) => {
+      const [anioRegistro, mesRegistro] = registro.fecha.split("-"); // Divide la fecha en "YYYY-MM-DD"
+      return (
+        anioRegistro === anioSeleccionado &&
+        mesRegistro === mesSeleccionadoNumero
+      );
+    });
+
+    //console.log(registrosFiltradosPorMes); // Muestra los registros filtrados por mes
+  });
+}
+capturarMes();
+
 function loadCategories() {
   const categories = JSON.parse(localStorage.getItem("categories")) || [];
   const tbody = document.querySelector("tbody");
@@ -142,7 +164,8 @@ function toggleDeleteModal(index = null) {
   modal.classList.toggle("hidden");
 }
 
-function addCategory() {// Función para agregar una nueva categoría
+function addCategory() {
+  // Función para agregar una nueva categoría
   const name = document.querySelector("#category-name").value;
   const type = document.querySelector("#category-type").value;
   const description = document.querySelector("#category-description").value;
@@ -155,7 +178,8 @@ function addCategory() {// Función para agregar una nueva categoría
   toggleModal();
 }
 
-function editCategory(index) {//
+function editCategory(index) {
+  //
   const categories = JSON.parse(localStorage.getItem("categories"));
   const category = categories[index];
 

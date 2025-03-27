@@ -74,28 +74,24 @@
 
                     
                     <!-- Botón para crear nueva categoría -->
-                    <button onclick="toggleModal()" class="btn btn--primary mb-4 bg-blue-500 text-white px-4 py-2 rounded">+ Nueva Categoría</button>
+                    <button onclick="toggleModal()" class="btn btn--primary mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">+ Nueva Categoría</button>
 
                     <!-- Tabla de Categorías -->
                     <table class="w-full border-collapse border border-gray-300">
                         <thead>
                             <tr class="bg-gray-200">
-                                <th class="border border-gray-300 px-4 py-2">Nombre</th>
+                                <th class="border border-gray-300 px-4 py-2">Categoria</th>
                                 <th class="border border-gray-300 px-4 py-2">Tipo</th>
-                                <th class="border border-gray-300 px-4 py-2">Clasificación</th>
                                 <th class="border border-gray-300 px-4 py-2">Descripción</th>
                                 <th class="border border-gray-300 px-4 py-2">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="bg-white border border-gray-300">
-                                <td class="border border-gray-300 px-4 py-2">Salario</td>
-                                <td class="border border-gray-300 px-4 py-2">Ingresos</td>
-                                <td class="border border-gray-300 px-4 py-2">Empleo Principal</td>
-                                <td class="border border-gray-300 px-4 py-2">Ingreso mensual del empleo</td>
+                                <td class="border border-gray-300 px-4 py-2"></td>
+                                <td class="border border-gray-300 px-4 py-2"></td>
+                                <td class="border border-gray-300 px-4 py-2"></td>
                                 <td class="border border-gray-300 px-4 py-2">
-                                    <button onclick="toggleEditModal()" class="btn btn--edit bg-yellow-500 text-white px-3 py-1 rounded">Editar</button>
-                                    <button onclick="toggleDeleteModal()" class="btn btn--delete bg-red-500 text-white px-3 py-1 rounded">Eliminar</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -108,25 +104,18 @@
                       <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
                           <h3 class="text-xl font-bold mb-4">Nueva Categoría</h3>
                           <form>
-                              <label class="block mb-2 font-semibold">Nombre:</label>
+                              <label class="block mb-2 font-semibold">Categoria:</label>
                               <input id="category-name" type="text" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese el nombre">
+                              <label class="block mb-2 font-semibold">Tipo:</label>
                                 <select id="category-type" class="w-full border border-gray-300 p-2 rounded mb-4">
                                   <option value="ingresos">Ingresos</option>
                                   <option value="gastos">Gastos</option>
                                   <option value="ahorros">Ahorros</option>
-                                  <option value="tarjetas">Tarjetas</option>
                                 </select>
-                              
-                              <label class="block mb-2 font-semibold">Clasificación:</label>
-                              <select id="category-classification" class="w-full border border-gray-300 p-2 rounded mb-4">
-                                <option value="empleo">Empleo Principal</option>
-                                <option value="independiente">Trabajo Independiente</option>
-                                <option value="emprendimiento">Emprendimiento</option>
-                              </select>
                               <textarea id="category-description" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese una descripción"></textarea>
                               <div class="flex justify-end gap-2">
-                                  <button type="button" onclick="toggleModal()" class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
-                                  <button type="button" onclick="addCategory()" class="bg-green-500 text-white px-4 py-2 rounded">Guardar</button>
+                                  <button type="button" onclick="toggleModal()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer">Cancelar</button>
+                                  <button type="button" onclick="addCategory()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer">Guardar</button>
                                 </div>
                           </form>
                       </div>
@@ -138,24 +127,16 @@
                         <h3 class="text-xl font-bold mb-4">Editar Categoría</h3>
                         <form>
                             <label class="block mb-2 font-semibold">Nombre:</label>
+                            <input id="edit-category-name" type="text" class="w-full border border-gray-300 p-2 rounded mb-4">
                             
                             <label class="block mb-2 font-semibold">Tipo:</label>
                             <input id="edit-category-index" type="hidden">
-                              <input id="edit-category-name" type="text" class="w-full border border-gray-300 p-2 rounded mb-4">
                               <select id="edit-category-type" class="w-full border border-gray-300 p-2 rounded mb-4">
                                 <option value="ingresos">Ingresos</option>
                                 <option value="gastos">Gastos</option>
                                 <option value="ahorros">Ahorros</option>
-                                <option value="tarjetas">Tarjetas</option>
                               </select>
-                            
-                            <label class="block mb-2 font-semibold">Clasificación:</label>
-                            <select id="edit-category-classification" class="w-full border border-gray-300 p-2 rounded mb-4">
-                              <option value="empleo">Empleo Principal</option>
-                              <option value="independiente">Trabajo Independiente</option>
-                              <option value="emprendimiento">Emprendimiento</option>
-                            </select>
-                            
+                          
                             <label class="block mb-2 font-semibold">Descripción:</label>
                             <textarea id="edit-category-description" class="w-full border border-gray-300 p-2 rounded mb-4"></textarea>
                             
@@ -176,8 +157,8 @@
                         <p class="mb-6 text-gray-700">¿Estás seguro de que deseas eliminar esta categoría? Esta acción no se puede deshacer.</p>
                         
                         <div class="flex justify-center gap-4">
-                            <button type="button"  class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
-                            <button type="button" onclick="deleteCategory()" class="bg-red-500 text-white px-4 py-2 rounded">Eliminar</button>
+                            <button type="button"  class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer">Cancelar</button>
+                            <button type="button" onclick="deleteCategory()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer">Eliminar</button>
                             <input type="hidden" id="delete-category-index">
 
                           </div>

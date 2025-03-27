@@ -11,7 +11,7 @@
   <body>
     <div class="flex h-screen">
       <aside
-        class="h-screen fixed bg-black text-white w-64 p-4 hidden md:block"
+        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block "
       >
         <div class="flex items-center gap-3">
           <div
@@ -22,25 +22,25 @@
               alt=""
             />
           </div>
-          <span class="text-lg">Grupo II</span>
+          <span class="text-lg font-bold">Grupo II</span>
         </div>
         <!-- Sección de panel de control -->
-        <div class="mt-6">
-          <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
-          <a href="index.html" class="block text-purple-400 mt-2">General</a>
+        <div class="mt-10">
+          <h2 class="font-bold uppercase text-sm">Panel de control</h2>
+          <a href="index.html" class="block text-indigo-400 mt-2">General</a>
         </div>
         <!-- Organizando las secciones -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
-          <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
-          <a href="categorias.html" class="block mt-2 hover:text-purple-400"
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">secciones</h2>
+          <a href="movimientos.html" class="block mt-2 hover:text-indigo-400">Movimientos</a>
+          <a href="categorias.html" class="block mt-2 hover:text-indigo-400"
             >Categorias</a
           >
         </div>
         <!-- Tenemos la sección ayuda -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">ayuda</h2>
-          <a href="#" class="block mt-2 hover:text-purple-400"
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">ayuda</h2>
+          <a href="manual.html" class="block mt-2 hover:text-indigo-400"
             >Manual de usuario</a
           >
         </div>
@@ -49,35 +49,40 @@
       <!-- Contenido Principal -->
       <div class="flex-1 ml-64 overflow-y-auto h-screen">
         <header
-          class="bg-purple-600 text-white p-4 flex justify-between items-center"
+          class="bg-indigo-600 text-white shadow-lg p-4 flex justify-between items-center"
         >
           <!-- Logo y titulo -->
-          <div class="flex items-center gap-2">
+          <div class="flex items-center ml-4 gap-2">
             <img
               src="https://cdn-icons-png.freepik.com/512/7892/7892280.png"
               alt="Logo"
               class="h-8"
             />
-            <h1 class="text-xl font-bold">Pesitos</h1>
+            <h1 class="text-2xl font-bold">Pesitos</h1>
           </div>
 
           <!-- Aca ira mi menú amburguesita en moviles -->
-          <button class="text-white text-3xl md:hidden">&#9776;</button>
+          <button class="text-3xl md:hidden">&#9776;</button>
 
           <!-- Aca ira mi icono de salir -->
-          <button class="text-white text-2xl btn btn-primary">&#10148;</button>
+          <button class="mr-4 text-2xl btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+            
+          </button>
         </header>
 
         <!-- A ca ira mi contenido -->
-        <main class="p-6 bg-gray-100">
+        <main class="p-6 bg-indigo-50">
           <div class="flex justify-between items-center">
             <h2 class="text-xl font-bold">General</h2>
             <!-- modal -->
             <button
               id="openModal"
-              class="bg-blue-500 text-white m-6 px-4 py-2 rounded"
+              class="bg-indigo-500 hover:bg-indigo-600 cursor-pointer trasform hover:scale-103 text-white m-6 px-4 py-2 rounded"
             >
-              Modal
+              + Ingresar Registro
             </button>
           </div>
 
@@ -85,7 +90,7 @@
             id="modal"
             class="hidden text-white fixed inset-0 flex items-center justify-center bg-neutral-950/80"
           >
-            <div class="bg-gray-800 rounded-lg p-15 w-150">
+            <div class="bg-gray-900 rounded-lg p-15 w-150">
               <header class="flex justify-between">
                 <h2 class="text-2xl font-bold my-4">Añadir Registro</h2>
                 <button id="closeModal" class="my-4">
@@ -107,7 +112,7 @@
                 <button
                   id="ingreso"
                   data-tipo="ingreso"
-                  class="js-tipo-boton bg-gray-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -130,7 +135,7 @@
                 <button
                   id="gasto"
                   data-tipo="gasto"
-                  class="js-tipo-boton bg-gray-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -153,7 +158,7 @@
                 <button
                   id="ahorro"
                   data-tipo="ahorro"
-                  class="js-tipo-boton bg-gray-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -184,7 +189,7 @@
                 <input
                   type="text"
                   id="categoria"
-                  class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                  class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                   required
                 />
 
@@ -194,7 +199,7 @@
                     <input
                       type="number"
                       id="monto"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     />
                   </div>
@@ -202,7 +207,7 @@
                     <label for="moneda" class="block mb-1">Moneda:</label>
                     <select
                       id="moneda"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     >
                       <option value="PEN" selected>PEN</option>
@@ -213,7 +218,7 @@
                     <input
                       type="date"
                       id="fecha"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     />
                   </div>
@@ -221,11 +226,11 @@
                 <label for="nota" class="block mb-1">Nota (Opcional):</label>
                 <textarea
                   id="nota"
-                  class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                  class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                 ></textarea>
                 <button
                   type="submit"
-                  class="bg-green-500 hover:bg-green-600 cursor-pointer text-white px-4 py-2 rounded w-50"
+                  class="bg-indigo-700 hover:bg-indigo-900 cursor-pointer text-white px-4 py-2 rounded w-50"
                 >
                   Añadir Registro
                 </button>
@@ -236,7 +241,7 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Fecha
               </p>
               <input
@@ -248,7 +253,8 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-9
+              00">
                 Mes
               </p>
               <input
@@ -260,7 +266,7 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Desde
               </p>
               <input
@@ -271,7 +277,7 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Hasta
               </p>
               <input
@@ -288,15 +294,15 @@
             <div class="flex flex-col gap-8">
               <canvas id="myChart" class="col-span-2"></canvas>
               <div class="flex flex-col mt-10">
-                <div class="col-span-2 bg-blue-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-600 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Balance acumulado</h3>
                   <p class="text-xl">$34,680.00</p>
                 </div>
-                <div class="col-span-2 bg-fuchsia-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-500 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Ingresos Acumulados</h3>
                   <p class="text-xl">$0.00</p>
                 </div>
-                <div class="col-span-2 bg-yellow-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-400 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Gastos acumulados</h3>
                   <p class="text-xl">$40,000.00</p>
                 </div>
@@ -306,28 +312,28 @@
             <div class="cols-span2 grid grid-cols-2 gap-4"></div> -->
           </div>
           <div
-            class="grid grid-cols-6 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4"
+            class="grid grid-cols-1 lg:grid-cols-2 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4"
           >
             <div
-              class="col-span-3 bg-blue-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Balance</h3>
               <p class="text-xl">$34,680.00</p>
             </div>
             <div
-              class="col-span-3 bg-lime-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Ahorros</h3>
               <p class="text-xl">$0.00</p>
             </div>
             <div
-              class="col-span-3 bg-fuchsia-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg cursor-pointer"
             >
               <h3 class="text-lg font-bold">Ingresos</h3>
               <p class="text-xl">$40,000.00</p>
             </div>
             <div
-              class="col-span-3 bg-yellow-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Gastos</h3>
               <p class="text-xl">$2,310.00</p>

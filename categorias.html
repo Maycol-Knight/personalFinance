@@ -8,7 +8,9 @@
   </head>
   <body>
     <div class="flex h-screen">
-      <aside class=" h-screen fixed bg-black text-white w-64 p-4 hidden md:block">
+      <aside
+        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block "
+      >
         <div class="flex items-center gap-3">
           <div
             class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
@@ -18,26 +20,25 @@
               alt=""
             />
           </div>
-          <span class="text-lg">Grupo II</span>
+          <span class="text-lg font-bold">Grupo II</span>
         </div>
         <!-- Sección de panel de control -->
-        <div class="mt-6">
-          <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
-          <a href="index.html" class="block text-purple-400 mt-2">General</a>
-          
+        <div class="mt-10">
+          <h2 class="font-bold uppercase text-sm">Panel de control</h2>
+          <a href="index.html" class="block text-indigo-400 mt-2">General</a>
         </div>
-
         <!-- Organizando las secciones -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
-          <a href="#" class="block mt-2 hover:text-purple-400">Movimientos</a>
-          <a href="categorias.html" class="block mt-2 hover:text-purple-400">Categorias</a>
-          <a href="#" class="block mt-2 hover:text-purple-400">Formas de pago</a>
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">secciones</h2>
+          <a href="movimientos.html" class="block mt-2 hover:text-indigo-400">Movimientos</a>
+          <a href="categorias.html" class="block mt-2 hover:text-indigo-400"
+            >Categorias</a
+          >
         </div>
         <!-- Tenemos la sección ayuda -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">ayuda</h2>
-          <a href="#" class="block mt-2 hover:text-purple-400"
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">ayuda</h2>
+          <a href="manual.html" class="block mt-2 hover:text-indigo-400"
             >Manual de usuario</a
           >
         </div>
@@ -46,23 +47,28 @@
       <!-- Contenido Principal -->
       <div class="flex-1 ml-64 overflow-y-auto h-screen">
         <header
-          class="bg-purple-600 text-white p-4 flex justify-between items-center"
+          class="bg-indigo-600 text-white shadow-lg p-4 flex justify-between items-center"
         >
           <!-- Logo y titulo -->
-          <div class="flex items-center gap-2">
+          <div class="flex items-center ml-4 gap-2">
             <img
               src="https://cdn-icons-png.freepik.com/512/7892/7892280.png"
               alt="Logo"
               class="h-8"
             />
-            <h1 class="text-xl font-bold">Pesitos</h1>
+            <h1 class="text-2xl font-bold">Pesitos</h1>
           </div>
 
           <!-- Aca ira mi menú amburguesita en moviles -->
-          <button class="text-white text-3xl md:hidden">&#9776;</button>
+          <button class="text-3xl md:hidden">&#9776;</button>
 
           <!-- Aca ira mi icono de salir -->
-          <button class="text-white text-2xl btn btn-primary">&#10148;</button>
+          <button class="mr-4 text-2xl btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+            
+          </button>
         </header>
 
         <main class="p-6 bg-gray-100">

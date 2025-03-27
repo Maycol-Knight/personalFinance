@@ -1,7 +1,4 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   loadCategories();
-// });
-
+//modal de categorias
 function toggleModal() {
   document.getElementById("modal").classList.toggle("hidden");
 }
@@ -65,11 +62,10 @@ function loadCategories() {
     row.innerHTML = `
         <td class="border border-gray-300 px-4 py-2">${category.name}</td>
         <td class="border border-gray-300 px-4 py-2">${category.type}</td>
-        <td class="border border-gray-300 px-4 py-2">${category.classification}</td>
         <td class="border border-gray-300 px-4 py-2">${category.description}</td>
         <td class="border border-gray-300 px-4 py-2">
-          <button onclick="editCategory(${index})" class="bg-yellow-500 text-white px-3 py-1 rounded">Editar</button>
-          <button onclick="toggleDeleteModal(${index})" class="bg-red-500 text-white px-3 py-1 rounded">Eliminar</button>
+          <button onclick="editCategory(${index})" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 cursor-pointer">Editar</button>
+          <button onclick="toggleDeleteModal(${index})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 cursor-pointer">Eliminar</button>
         </td>
       `;
     tbody.appendChild(row);
@@ -86,30 +82,25 @@ function toggleDeleteModal(index = null) {
   modal.classList.toggle("hidden");
 }
 
-function addCategory() {
+function addCategory() {// Función para agregar una nueva categoría
   const name = document.querySelector("#category-name").value;
   const type = document.querySelector("#category-type").value;
-  const classification = document.querySelector(
-    "#category-classification"
-  ).value;
   const description = document.querySelector("#category-description").value;
 
   const categories = JSON.parse(localStorage.getItem("categories")) || [];
-  categories.push({ name, type, classification, description });
+  categories.push({ name, type, description });
   localStorage.setItem("categories", JSON.stringify(categories));
 
   loadCategories();
   toggleModal();
 }
 
-function editCategory(index) {
+function editCategory(index) {//
   const categories = JSON.parse(localStorage.getItem("categories"));
   const category = categories[index];
 
   document.querySelector("#edit-category-name").value = category.name;
   document.querySelector("#edit-category-type").value = category.type;
-  document.querySelector("#edit-category-classification").value =
-    category.classification;
   document.querySelector("#edit-category-description").value =
     category.description;
   document.querySelector("#edit-category-index").value = index;
@@ -124,8 +115,6 @@ function saveEditedCategory() {
   categories[index] = {
     name: document.querySelector("#edit-category-name").value,
     type: document.querySelector("#edit-category-type").value,
-    classification: document.querySelector("#edit-category-classification")
-      .value,
     description: document.querySelector("#edit-category-description").value,
   };
 

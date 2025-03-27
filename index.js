@@ -20,7 +20,48 @@ const closeModalBtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
 const registroForm = document.getElementById("registroForm");
 
-const registros = [];
+const registrosIniciales = [
+  {
+    tipo: "ingreso",
+    categoria: "Salario",
+    monto: 1000,
+    moneda: "PEN",
+    fecha: "2025-03-26",
+    nota: "Pago mensual",
+  },
+  {
+    tipo: "gasto",
+    categoria: "Alquiler",
+    monto: 500,
+    moneda: "PEN",
+    fecha: "2025-03-26",
+    nota: "Pago de alquiler",
+  },
+  {
+    tipo: "ingreso",
+    categoria: "Freelance",
+    monto: 300,
+    moneda: "PEN",
+    fecha: "2025-03-26",
+    nota: "Trabajo freelance",
+  },
+  {
+    tipo: "gasto",
+    categoria: "Comida",
+    monto: 200,
+    moneda: "PEN",
+    fecha: "2025-03-27",
+    nota: "Compra de supermercado",
+  },
+  {
+    tipo: "ahorro",
+    categoria: "Ahorro",
+    monto: 100,
+    moneda: "PEN",
+    fecha: "2025-03-27",
+    nota: "Ahorro mensual",
+  },
+];
 
 function toggleModalDashboard() {
   modal.classList.toggle("hidden");
@@ -28,13 +69,17 @@ function toggleModalDashboard() {
 openModalBtn.addEventListener("click", toggleModalDashboard);
 closeModalBtn.addEventListener("click", toggleModalDashboard);
 let tipoBtn = document.querySelectorAll(".js-tipo-boton");
+
+// Captura el tipo de registro mediante el evento click
 tipoBtn.forEach((tipo) => {
   tipo.addEventListener("click", (event) => {
     event.preventDefault();
     tipoSeleccionado = event.currentTarget.dataset.tipo; // Captura el tipo
+    console.log(tipoSeleccionado);
   });
 });
 
+// Captura los datos del formulario y lo guardo en registrosIniciales
 registroForm.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(event);
@@ -48,11 +93,26 @@ registroForm.addEventListener("submit", (event) => {
     nota: nota.value,
   };
   console.log(newRegistro);
-  registros.push(newRegistro);
+  registrosIniciales.push(newRegistro); // Agrega el nuevo registro al array
   // registroForm.reset();
   modal.classList.add("hidden"); // Cierra el modal
-  console.log(registros);
+  console.log(registrosIniciales);
 });
+
+// Capturar el evento click en filtro fecha
+
+function capturarFecha() {
+  const fechaFilter = document.querySelector("#fechaFilter");
+  fechaFilter.addEventListener("change", (event) => {
+    const fechaSeleccionada = event.target.value;
+    // console.log(fechaSeleccionada);
+    const registrosFiltradosPorFecha = registrosIniciales.filter((registro) => {
+      return registro.fecha === fechaSeleccionada;
+    });
+    // console.log(registrosFiltradosPorFecha);
+  });
+}
+capturarFecha();
 
 function loadCategories() {
   const categories = JSON.parse(localStorage.getItem("categories")) || [];

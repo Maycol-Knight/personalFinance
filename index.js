@@ -96,8 +96,50 @@ registroForm.addEventListener("submit", (event) => {
   console.log(registrosIniciales);
 });
 
-// Capturar el evento click en filtro fecha
 
+function filtroCard(registrosFiltrados) {
+  
+  const montoTotalIngresos = registrosFiltrados.reduce((total, registro) => {
+      if (registro.tipo === "ingreso") {
+        return total + registro.monto;
+    } else {
+      return total;
+    }
+  },
+  total = 0
+);
+// filtrar el monto total de gastos del objeto filtrado
+const montoTotalGastos = registrosFiltrados.reduce((total, registro) => {
+    if (registro.tipo === "gasto") {// Si el tipo es gasto
+      return total + registro.monto;
+    } else {// Si no es gasto
+      return total;
+    }
+  },
+  total = 0
+);
+// filtrar el monto total de ahorro del objeto filtrado
+const montoTotalAhorro = registrosFiltrados.reduce((total, registro) => {
+    if (registro.tipo === "ahorro") {
+      return total + registro.monto;
+    } else {
+      return total;
+    }
+  },
+  total = 0
+);
+// console.log(montoTotalIngresos);
+// console.log(montoTotalGastos);
+// console.log(montoTotalAhorro);
+// Actualizar la interfaz con los totales
+document.getElementById("ingresosFiltro").textContent = `S/. ${montoTotalIngresos}`;
+document.getElementById("gastosFiltro").textContent = `S/. ${montoTotalGastos}`;
+document.getElementById("ahorrosFiltro").textContent = `S/. ${montoTotalAhorro}`;
+document.getElementById("balanceFiltro").textContent = `S/. ${montoTotalIngresos - montoTotalGastos - montoTotalAhorro}`;
+}
+
+
+// Capturar el evento click en filtro fecha
 function capturarFecha() {
   const fechaFilter = document.querySelector("#fechaFilter");
   fechaFilter.addEventListener("change", (event) => {
@@ -107,8 +149,10 @@ function capturarFecha() {
       return registro.fecha === fechaSeleccionada;
     });
     // console.log(registrosFiltradosPorFecha);
+    filtroCard(registrosFiltradosPorFecha);
   });
 }
+
 capturarFecha();
 
 // Capturar el evento click en filtro mes
@@ -129,6 +173,7 @@ function capturarMes() {
     });
 
     //console.log(registrosFiltradosPorMes); // Muestra los registros filtrados por mes
+    filtroCard(registrosFiltradosPorMes);
   });
 }
 capturarMes();

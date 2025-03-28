@@ -65,12 +65,13 @@
           <button class="text-3xl md:hidden">&#9776;</button>
 
           <!-- Aca ira mi icono de salir -->
+           <a href="portada.html">
           <button class="mr-4 text-2xl btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
             </svg>
-            
           </button>
+        </a>
         </header>
 
         <!-- A ca ira mi contenido -->
@@ -80,7 +81,7 @@
             <!-- modal -->
             <button
               id="openModal"
-              class="bg-indigo-500 hover:bg-indigo-600 cursor-pointer trasform hover:scale-103 text-white m-6 px-4 py-2 rounded"
+              class="bg-indigo-600 hover:bg-indigo-800 cursor-pointer trasform hover:scale-103 text-white m-6 px-4 py-2 rounded"
             >
               + Ingresar Registro
             </button>
@@ -185,13 +186,10 @@
                 id="registroForm"
                 class="flex justify-center items-center flex-col"
               >
-                <label for="cuenta" class="mb-1">Categoria:</label>
-                <input
-                  type="text"
-                  id="categoria"
-                  class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
-                  required
-                />
+              <label for="categoria" class="mb-1">Categoría:</label>
+              <select id="categoria" class="bg-indigo-900 text-white w-full p-2 rounded mb-4" required>
+                <option value="">Seleccione una categoría</option>
+              </select>
 
                 <div class="flex justify-between w-120">
                   <div>

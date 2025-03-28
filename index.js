@@ -165,18 +165,52 @@ function toggleDeleteModal(index = null) {
 }
 
 function addCategory() {
-  // Función para agregar una nueva categoría
-  const name = document.querySelector("#category-name").value;
-  const type = document.querySelector("#category-type").value;
-  const description = document.querySelector("#category-description").value;
+  let name = document.getElementById("category-name").value.trim();
+    let type = document.getElementById("category-type").value;
+    let description = document.getElementById("category-description").value.trim();
 
-  const categories = JSON.parse(localStorage.getItem("categories")) || [];
-  categories.push({ name, type, description });
-  localStorage.setItem("categories", JSON.stringify(categories));
+    let errorName = document.getElementById("error-name");
+    let errorType = document.getElementById("error-type");
 
-  loadCategories();
-  toggleModal();
+    // Reiniciar errores
+    errorName.classList.add("hidden");
+    errorType.classList.add("hidden");
+
+    let isValid = true;
+
+    // Validar Nombre
+    if (name === "") {
+        errorName.classList.remove("hidden");
+        isValid = false;
+    }
+
+    // Validar Tipo
+    if (type === "") {
+        errorType.classList.remove("hidden");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return; // No continuar si hay errores
+    }
+
+    // Obtener categorías almacenadas en localStorage
+    let categories = JSON.parse(localStorage.getItem("categories")) || [];
+
+    // Agregar nueva categoría
+    categories.push({ name, type, description });
+
+    // Guardar en localStorage
+    localStorage.setItem("categories", JSON.stringify(categories));
+
+    // Cerrar modal y limpiar formulario
+    toggleModal();
+    document.getElementById("category-form").reset();
+
+    // Recargar la tabla
+    loadCategories();
 }
+
 
 function editCategory(index) {
   //
@@ -241,3 +275,29 @@ function guardarCategoria() {
     alert("Esta categoría ya existe.");
   }
 }
+
+
+function loadCategoriesByType(tipo) {
+  let categories = JSON.parse(localStorage.getItem("categories")) || [];
+  let categoriaSelect = document.getElementById("categoria");
+
+  // Limpiar opciones anteriores
+  categoriaSelect.innerHTML = '<option value="">Seleccione una categoría</option>';
+
+  // Filtrar categorías según el tipo seleccionado
+  let filteredCategories = categories.filter(cat => cat.type === tipo);
+
+  // Agregar opciones al select
+  filteredCategories.forEach(cat => {
+      let option = document.createElement("option");
+      option.value = cat.name;
+      option.textContent = cat.name;
+      categoriaSelect.appendChild(option);
+  });
+}
+document.querySelectorAll(".js-tipo-boton").forEach(boton => {
+  boton.addEventListener("click", function() {
+      let tipoSeleccionado = this.getAttribute("data-tipo");
+      loadCategoriesByType(tipoSeleccionado);
+  });
+});

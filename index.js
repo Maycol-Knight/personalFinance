@@ -166,51 +166,52 @@ function toggleDeleteModal(index = null) {
 
 function addCategory() {
   let name = document.getElementById("category-name").value.trim();
-    let type = document.getElementById("category-type").value;
-    let description = document.getElementById("category-description").value.trim();
+  let type = document.getElementById("category-type").value;
+  let description = document
+    .getElementById("category-description")
+    .value.trim();
 
-    let errorName = document.getElementById("error-name");
-    let errorType = document.getElementById("error-type");
+  let errorName = document.getElementById("error-name");
+  let errorType = document.getElementById("error-type");
 
-    // Reiniciar errores
-    errorName.classList.add("hidden");
-    errorType.classList.add("hidden");
+  // Reiniciar errores
+  errorName.classList.add("hidden");
+  errorType.classList.add("hidden");
 
-    let isValid = true;
+  let isValid = true;
 
-    // Validar Nombre
-    if (name === "") {
-        errorName.classList.remove("hidden");
-        isValid = false;
-    }
+  // Validar Nombre
+  if (name === "") {
+    errorName.classList.remove("hidden");
+    isValid = false;
+  }
 
-    // Validar Tipo
-    if (type === "") {
-        errorType.classList.remove("hidden");
-        isValid = false;
-    }
+  // Validar Tipo
+  if (type === "") {
+    errorType.classList.remove("hidden");
+    isValid = false;
+  }
 
-    if (!isValid) {
-        return; // No continuar si hay errores
-    }
+  if (!isValid) {
+    return; // No continuar si hay errores
+  }
 
-    // Obtener categorías almacenadas en localStorage
-    let categories = JSON.parse(localStorage.getItem("categories")) || [];
+  // Obtener categorías almacenadas en localStorage
+  let categories = JSON.parse(localStorage.getItem("categories")) || [];
 
-    // Agregar nueva categoría
-    categories.push({ name, type, description });
+  // Agregar nueva categoría
+  categories.push({ name, type, description });
 
-    // Guardar en localStorage
-    localStorage.setItem("categories", JSON.stringify(categories));
+  // Guardar en localStorage
+  localStorage.setItem("categories", JSON.stringify(categories));
 
-    // Cerrar modal y limpiar formulario
-    toggleModal();
-    document.getElementById("category-form").reset();
+  // Cerrar modal y limpiar formulario
+  toggleModal();
+  document.getElementById("category-form").reset();
 
-    // Recargar la tabla
-    loadCategories();
+  // Recargar la tabla
+  loadCategories();
 }
-
 
 function editCategory(index) {
   //
@@ -276,32 +277,31 @@ function guardarCategoria() {
   }
 }
 
-
 function loadCategoriesByType(tipo) {
   let categories = JSON.parse(localStorage.getItem("categories")) || [];
   let categoriaSelect = document.getElementById("categoria");
 
   // Limpiar opciones anteriores
-  categoriaSelect.innerHTML = '<option value="">Seleccione una categoría</option>';
+  categoriaSelect.innerHTML =
+    '<option value="">Seleccione una categoría</option>';
 
   // Filtrar categorías según el tipo seleccionado
-  let filteredCategories = categories.filter(cat => cat.type === tipo);
+  let filteredCategories = categories.filter((cat) => cat.type === tipo);
 
   // Agregar opciones al select
-  filteredCategories.forEach(cat => {
-      let option = document.createElement("option");
-      option.value = cat.name;
-      option.textContent = cat.name;
-      categoriaSelect.appendChild(option);
+  filteredCategories.forEach((cat) => {
+    let option = document.createElement("option");
+    option.value = cat.name;
+    option.textContent = cat.name;
+    categoriaSelect.appendChild(option);
   });
 }
-document.querySelectorAll(".js-tipo-boton").forEach(boton => {
-  boton.addEventListener("click", function() {
-      let tipoSeleccionado = this.getAttribute("data-tipo");
-      loadCategoriesByType(tipoSeleccionado);
+document.querySelectorAll(".js-tipo-boton").forEach((boton) => {
+  boton.addEventListener("click", function () {
+    let tipoSeleccionado = this.getAttribute("data-tipo");
+    loadCategoriesByType(tipoSeleccionado);
   });
 });
-
 
 // CalculO de acumulados
 // sumar los ingresos y gastos usando reduce
@@ -324,11 +324,13 @@ const balanceAcumulado = totalIngresos - totalGastos;
 
 // console.log("Total de ingresos:", totalIngresos);
 // console.log("Total de gastos:", totalGastos);
-// console.log("Balance acumulado:", balanceAcumulado);  
-
+// console.log("Balance acumulado:", balanceAcumulado);
 
 // Actualizar la interfaz con los totales
-document.getElementById("ingresosAcumulados").textContent =`S/. ${totalIngresos}`;
-document.getElementById("gastosAcumulados").textContent =`S/. ${totalGastos}`;
-document.getElementById("balanceAcumulado").textContent =`S/. ${balanceAcumulado}`;
-
+document.getElementById(
+  "ingresosAcumulados"
+).textContent = `S/. ${totalIngresos}`;
+document.getElementById("gastosAcumulados").textContent = `S/. ${totalGastos}`;
+document.getElementById(
+  "balanceAcumulado"
+).textContent = `S/. ${balanceAcumulado}`;

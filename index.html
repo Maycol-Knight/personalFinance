@@ -11,7 +11,7 @@
   <body>
     <div class="flex h-screen">
       <aside
-        class="h-screen fixed bg-black text-white w-64 p-4 hidden md:block"
+        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block "
       >
         <div class="flex items-center gap-3">
           <div
@@ -22,100 +22,75 @@
               alt=""
             />
           </div>
-          <span class="text-lg">Grupo II</span>
+          <span class="text-lg font-bold">Grupo II</span>
         </div>
         <!-- Sección de panel de control -->
-        <div class="mt-6">
-          <h2 class="text-gray-400 uppercase text-sm">Panel de control</h2>
-          <a href="#" class="hover:text-purple-400 mt-2 flex items-center">
-            <svg class="h-5 w-5 text-yellow-500 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            General
-          </a>
+        <div class="mt-10">
+          <h2 class="font-bold uppercase text-sm">Panel de control</h2>
+          <a href="index.html" class="block text-indigo-400 mt-2">General</a>
         </div>
         <!-- Organizando las secciones -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">secciones</h2>
-          <a href="#" class="hover:text-purple-400 mt-2 flex items-center">
-            <svg class="h-5 w-5 text-yellow-500 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <rect x="3" y="7" width="18" height="13" rx="2" />
-              <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-              <line x1="12" y1="12" x2="12" y2="12.01" />
-              <path d="M3 13a20 20 0 0 0 18 0" />
-            </svg>
-            Movimientos
-          </a>
-          <!-- Categorias -->
-          <a href="#" class="hover:text-purple-400 mt-2 flex items-center">
-            <svg class="h-5 w-5 text-yellow-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-            </svg>
-            Categorías
-          </a>
-          <!-- Formas de pago -->
-          <a href="#" class="hover:text-purple-400 mt-2 flex items-center">
-            <svg class="h-5 w-5 text-yellow-500 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-            Formas de pago
-          </a>
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">secciones</h2>
+          <a href="movimientos.html" class="block mt-2 hover:text-indigo-400">Movimientos</a>
+          <a href="categorias.html" class="block mt-2 hover:text-indigo-400"
+            >Categorias</a
+          >
         </div>
         <!-- Tenemos la sección ayuda -->
-        <div class="mt-4">
-          <h2 class="text-gray-400 uppercase text-sm">ayuda</h2>
-          <a href="#" class="hover:text-purple-400 mt-2 flex items-center">
-            <svg class="h-5 w-5 text-yellow-500 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
-              <line x1="8" y1="8" x2="12" y2="8" />
-              <line x1="8" y1="12" x2="12" y2="12" />
-              <line x1="8" y1="16" x2="12" y2="16" />
-            </svg>
-            Manual de usuario
-          </a>
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">ayuda</h2>
+          <a href="manual.html" class="block mt-2 hover:text-indigo-400"
+            >Manual de usuario</a
+          >
         </div>
       </aside>
 
       <!-- Contenido Principal -->
       <div class="flex-1 ml-64 overflow-y-auto h-screen">
         <header
-          class="bg-purple-600 text-white p-4 flex justify-between items-center"
+          class="bg-indigo-600 text-white shadow-lg p-4 flex justify-between items-center"
         >
           <!-- Logo y titulo -->
-          <div class="flex items-center gap-2">
+          <div class="flex items-center ml-4 gap-2">
             <img
               src="https://cdn-icons-png.freepik.com/512/7892/7892280.png"
               alt="Logo"
               class="h-8"
             />
-            <h1 class="text-xl font-bold">Pesitos</h1>
+            <h1 class="text-2xl font-bold">Pesitos</h1>
           </div>
 
           <!-- Aca ira mi menú amburguesita en moviles -->
-          <button class="text-white text-3xl md:hidden">&#9776;</button>
+          <button class="text-3xl md:hidden">&#9776;</button>
 
           <!-- Aca ira mi icono de salir -->
-          <button class="text-white text-2xl btn btn-primary">&#10148;</button>
+           <a href="portada.html">
+          <button class="mr-4 text-2xl btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+          </button>
+        </a>
         </header>
 
         <!-- A ca ira mi contenido -->
-        <main class="p-6 bg-gray-100">
+        <main class="p-6 bg-indigo-50">
           <div class="flex justify-between items-center">
             <h2 class="text-xl font-bold">General</h2>
             <!-- modal -->
             <button
               id="openModal"
-              class="bg-blue-500 text-white m-6 px-4 py-2 rounded"
+              class="bg-indigo-600 hover:bg-indigo-800 cursor-pointer trasform hover:scale-103 text-white m-6 px-4 py-2 rounded"
             >
-              Modal
+              + Ingresar Registro
             </button>
           </div>
-
-          <div id="modal"class="hidden text-white fixed inset-0 flex items-center justify-center bg-neutral-950/80">
-            <div class="bg-gray-800 rounded-lg p-15 w-150">
+          <div
+            id="modal"
+            class="hidden text-white fixed inset-0 flex items-center justify-center bg-neutral-950/80"
+          >
+            <div class="bg-gray-900 rounded-lg p-15 w-150">
               <header class="flex justify-between">
                 <h2 class="text-2xl font-bold my-4">Añadir Registro</h2>
                 <button id="closeModal" class="my-4">
@@ -137,7 +112,7 @@
                 <button
                   id="ingreso"
                   data-tipo="ingreso"
-                  class="js-tipo-boton bg-gray-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-green-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -160,7 +135,7 @@
                 <button
                   id="gasto"
                   data-tipo="gasto"
-                  class="js-tipo-boton bg-gray-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-red-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -183,7 +158,7 @@
                 <button
                   id="ahorro"
                   data-tipo="ahorro"
-                  class="js-tipo-boton bg-gray-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
+                  class="js-tipo-boton bg-indigo-600 hover:bg-blue-500 trasform hover:scale-120 cursor-pointer text-white text-xl px-6 py-2 rounded-lg flex items-center gap-1"
                 >
                   <svg
                     class="h-8 w-8 text-white"
@@ -210,13 +185,10 @@
                 id="registroForm"
                 class="flex justify-center items-center flex-col"
               >
-                <label for="cuenta" class="mb-1">Categoria:</label>
-                <input
-                  type="text"
-                  id="categoria"
-                  class="bg-gray-700 text-white w-full p-2 rounded mb-4"
-                  required
-                />
+              <label for="categoria" class="mb-1">Categoría:</label>
+              <select id="categoria" class="bg-indigo-900 text-white w-full p-2 rounded mb-4" required>
+                <option value="">Seleccione una categoría</option>
+              </select>
 
                 <div class="flex justify-between w-120">
                   <div>
@@ -224,7 +196,7 @@
                     <input
                       type="number"
                       id="monto"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     />
                   </div>
@@ -232,7 +204,7 @@
                     <label for="moneda" class="block mb-1">Moneda:</label>
                     <select
                       id="moneda"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     >
                       <option value="PEN" selected>PEN</option>
@@ -243,7 +215,7 @@
                     <input
                       type="date"
                       id="fecha"
-                      class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                      class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                       required
                     />
                   </div>
@@ -251,11 +223,11 @@
                 <label for="nota" class="block mb-1">Nota (Opcional):</label>
                 <textarea
                   id="nota"
-                  class="bg-gray-700 text-white w-full p-2 rounded mb-4"
+                  class="bg-indigo-900 text-white w-full p-2 rounded mb-4"
                 ></textarea>
                 <button
                   type="submit"
-                  class="bg-green-500 hover:bg-green-600 cursor-pointer text-white px-4 py-2 rounded w-50"
+                  class="bg-indigo-700 hover:bg-indigo-900 cursor-pointer text-white px-4 py-2 rounded w-50"
                 >
                   Añadir Registro
                 </button>
@@ -266,10 +238,11 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Fecha
               </p>
               <input
+                id="fechaFilter"
                 class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
                 type="date"
               />
@@ -277,10 +250,12 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-9
+              00">
                 Mes
               </p>
               <input
+                id="mesFilter"
                 class="w-full rounded-lg border border-gray-950/10 bg-[Field] px-3 py-1 text-[FieldText] dark:border-white/10"
                 type="month"
               />
@@ -288,7 +263,7 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Desde
               </p>
               <input
@@ -299,7 +274,7 @@
             <div
               class="flex flex-grow flex-col items-center gap-3 text-center scheme-light"
             >
-              <p class="font-mono font-medium text-gray-500 dark:text-gray-400">
+              <p class="font-mono font-medium text-gray-900">
                 Hasta
               </p>
               <input
@@ -316,15 +291,15 @@
             <div class="flex flex-col gap-8">
               <canvas id="myChart" class="col-span-2"></canvas>
               <div class="flex flex-col mt-10">
-                <div class="col-span-2 bg-blue-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-600 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Balance acumulado</h3>
                   <p class="text-xl">$34,680.00</p>
                 </div>
-                <div class="col-span-2 bg-fuchsia-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-500 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Ingresos Acumulados</h3>
                   <p class="text-xl">$0.00</p>
                 </div>
-                <div class="col-span-2 bg-yellow-500 text-white p-6 shadow-lg">
+                <div class="col-span-2 bg-indigo-400 text-black p-6 shadow-lg trasform hover:scale-105">
                   <h3 class="text-lg font-bold">Gastos acumulados</h3>
                   <p class="text-xl">$40,000.00</p>
                 </div>
@@ -334,54 +309,34 @@
             <div class="cols-span2 grid grid-cols-2 gap-4"></div> -->
           </div>
           <div
-            class="grid grid-cols-6 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4"
+            class="grid grid-cols-1 lg:grid-cols-2 bg-gray-100 p-4 rounded-lg shadow-lg mt-4 gap-4"
           >
             <div
-              class="col-span-3 bg-blue-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Balance</h3>
               <p class="text-xl">$34,680.00</p>
             </div>
             <div
-              class="col-span-3 bg-lime-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Ahorros</h3>
               <p class="text-xl">$0.00</p>
             </div>
             <div
-              class="col-span-3 bg-fuchsia-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg cursor-pointer"
             >
               <h3 class="text-lg font-bold">Ingresos</h3>
               <p class="text-xl">$40,000.00</p>
             </div>
             <div
-              class="col-span-3 bg-yellow-500 text-white p-6 rounded-lg shadow-lg"
+              class=" bg-gray-800 text-white p-6 rounded-lg shadow-lg"
             >
               <h3 class="text-lg font-bold">Gastos</h3>
               <p class="text-xl">$2,310.00</p>
             </div>
           </div>
         </main>
-        <div class="p-5 flex space-x-4">
-          <a
-            href="ingresosForm.html"
-            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
-          >
-            Formulario de Ingresos
-          </a>
-          <a
-            href="gastosForm.html"
-            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
-          >
-            Formulario de Gastos
-          </a>
-          <a
-            href="ahorrosForm.html"
-            class="bg-blue-500 text-white font-bold mt-5 py-2 px-4 rounded hover:bg-blue-700"
-          >
-            Formulario de Ahorros
-          </a>
-        </div>
       </div>
     </div>
 

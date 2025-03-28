@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="icons/hand-holding-dollar-solid.svg" />
+    <title>Pesitos</title>
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <aside
+        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block "
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="bg-gray-600 rounded-full h10 w-10 flex items-center justify-center text-lg"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/024/553/853/non_2x/colorful-eagle-head-logo-pop-art-style-eagle-face-sticker-pastel-cute-colors-ai-generated-png.png"
+              alt=""
+            />
+          </div>
+          <span class="text-lg font-bold">Grupo II</span>
+        </div>
+        <!-- Sección de panel de control -->
+        <div class="mt-10">
+          <h2 class="font-bold uppercase text-sm">Panel de control</h2>
+          <a href="index.html" class="block hover:text-indigo-400 mt-2">General</a>
+        </div>
+        <!-- Organizando las secciones -->
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">secciones</h2>
+          <a href="movimientos.html" class="block mt-2 thover:text-indigo-400">Movimientos</a>
+          <a href="categorias.html" class="block mt-2 hover:text-indigo-400"
+            >Categorias</a
+          >
+        </div>
+        <!-- Tenemos la sección ayuda -->
+        <div class="mt-8">
+          <h2 class="font-bold uppercase text-sm">ayuda</h2>
+          <a href="#" class="block mt-2 text-indigo-400"
+            >Manual de usuario</a
+          >
+        </div>
+      </aside>
+
+      <!-- Contenido Principal -->
+      <div class="flex-1 ml-64 overflow-y-auto h-screen">
+        <header
+          class="bg-indigo-600 text-white shadow-lg p-4 flex justify-between items-center"
+        >
+          <!-- Logo y titulo -->
+          <div class="flex items-center ml-4 gap-2">
+            <img
+              src="https://cdn-icons-png.freepik.com/512/7892/7892280.png"
+              alt="Logo"
+              class="h-8"
+            />
+            <h1 class="text-2xl font-bold">Pesitos</h1>
+          </div>
+
+          <!-- Aca ira mi menú amburguesita en moviles -->
+          <button class="text-3xl md:hidden">&#9776;</button>
+
+          <!-- Aca ira mi icono de salir -->
+          <a href="portada.html">
+            <button class="mr-4 text-2xl btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              </svg>
+            </button>
+          </a>
+        </header>
+
+        <!-- A ca ira mi contenido -->
+        <main class="p-6 bg-indigo-50">
+        
+        </main>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+    </body>
+</html>

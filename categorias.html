@@ -9,7 +9,7 @@
   <body>
     <div class="flex h-screen">
       <aside
-        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block "
+        class="h-screen fixed bg-black text-white shadow-lg w-64 p-4 hidden md:block"
       >
         <div class="flex items-center gap-3">
           <div
@@ -25,22 +25,99 @@
         <!-- Sección de panel de control -->
         <div class="mt-10">
           <h2 class="font-bold uppercase text-sm">Panel de control</h2>
-          <a href="index.html" class="block text-indigo-400 mt-2">General</a>
+          <a
+            href="index.html"
+            class="hover:text-indigo-400 mt-2 flex items-center"
+          >
+            <svg
+              class="h-5 w-5 mr-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            General
+          </a>
         </div>
         <!-- Organizando las secciones -->
         <div class="mt-8">
           <h2 class="font-bold uppercase text-sm">secciones</h2>
-          <a href="movimientos.html" class="block mt-2 hover:text-indigo-400">Movimientos</a>
-          <a href="categorias.html" class="block mt-2 hover:text-indigo-400"
-            >Categorias</a
+          <a
+            href="movimientos.html"
+            class="flex items-center mt-2 hover:text-indigo-400"
           >
+            <svg
+              class="h-5 w-5 mr-1"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <rect x="3" y="7" width="18" height="13" rx="2" />
+              <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+              <line x1="12" y1="12" x2="12" y2="12.01" />
+              <path d="M3 13a20 20 0 0 0 18 0" />
+            </svg>
+            Movimientos
+          </a>
+          <a
+            href="categorias.html"
+            class="flex items-center mt-2 text-indigo-400"
+          >
+            <svg
+              class="h-5 w-5 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              />
+            </svg>
+            Categorias
+          </a>
         </div>
         <!-- Tenemos la sección ayuda -->
         <div class="mt-8">
           <h2 class="font-bold uppercase text-sm">ayuda</h2>
-          <a href="manual.html" class="block mt-2 hover:text-indigo-400"
-            >Manual de usuario</a
+          <a
+            href="manual.html"
+            class="flex items-center mt-2 hover:text-indigo-400"
           >
+            <svg
+              class="h-5 w-5 mr-1"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <path
+                d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
+              />
+              <line x1="8" y1="8" x2="12" y2="8" />
+              <line x1="8" y1="12" x2="12" y2="12" />
+              <line x1="8" y1="16" x2="12" y2="16" />
+            </svg>
+            Manual de usuario
+          </a>
         </div>
       </aside>
 
@@ -65,123 +142,213 @@
           <!-- Aca ira mi icono de salir -->
           <a href="portada.html">
             <button class="mr-4 text-2xl btn btn-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+                />
               </svg>
             </button>
           </a>
         </header>
 
         <main class="p-6 bg-gray-100">
-
           <div>
-            
-                <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-4">Gestión de Categorías</h2>
+            <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-bold mb-4">Gestión de Categorías</h2>
 
-                    
-                    <!-- Botón para crear nueva categoría -->
-                    <button onclick="toggleModal()" class="btn btn--primary mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">+ Nueva Categoría</button>
+              <!-- Botón para crear nueva categoría -->
+              <button
+                onclick="toggleModal()"
+                class="btn btn--primary mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+              >
+                + Nueva Categoría
+              </button>
 
-                    <!-- Tabla de Categorías -->
-                    <table class="w-full border-collapse border border-gray-300">
-                        <thead>
-                            <tr class="bg-gray-200">
-                                <th class="border border-gray-300 px-4 py-2">Categoria</th>
-                                <th class="border border-gray-300 px-4 py-2">Tipo</th>
-                                <th class="border border-gray-300 px-4 py-2">Descripción</th>
-                                <th class="border border-gray-300 px-4 py-2">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white border border-gray-300">
-                                <td class="border border-gray-300 px-4 py-2"></td>
-                                <td class="border border-gray-300 px-4 py-2"></td>
-                                <td class="border border-gray-300 px-4 py-2"></td>
-                                <td class="border border-gray-300 px-4 py-2">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+              <!-- Tabla de Categorías -->
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-200">
+                    <th class="border border-gray-300 px-4 py-2">Categoria</th>
+                    <th class="border border-gray-300 px-4 py-2">Tipo</th>
+                    <th class="border border-gray-300 px-4 py-2">
+                      Descripción
+                    </th>
+                    <th class="border border-gray-300 px-4 py-2">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border border-gray-300">
+                    <td class="border border-gray-300 px-4 py-2"></td>
+                    <td class="border border-gray-300 px-4 py-2"></td>
+                    <td class="border border-gray-300 px-4 py-2"></td>
+                    <td class="border border-gray-300 px-4 py-2"></td>
+                  </tr>
+                </tbody>
+              </table>
 
+              <!-- Modal para Nueva Categoría -->
+              <div
+                id="modal"
+                class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden"
+              >
+                <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+                  <h3 class="text-xl font-bold mb-4">Nueva Categoría</h3>
+                  <form id="category-form">
+                    <label class="block mb-2 font-semibold">Categoría:</label>
+                    <input
+                      id="category-name"
+                      type="text"
+                      class="w-full border border-gray-300 p-2 rounded mb-2"
+                      placeholder="Ingrese el nombre"
+                    />
+                    <span id="error-name" class="text-red-500 text-sm hidden"
+                      >Este campo es obligatorio</span
+                    >
 
-                    <!-- Modal para Nueva Categoría -->
-                    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden">
-                      <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
-                          <h3 class="text-xl font-bold mb-4">Nueva Categoría</h3>
-                          <form id="category-form">
-                              <label class="block mb-2 font-semibold">Categoría:</label>
-                              <input id="category-name" type="text" class="w-full border border-gray-300 p-2 rounded mb-2" placeholder="Ingrese el nombre">
-                              <span id="error-name" class="text-red-500 text-sm hidden">Este campo es obligatorio</span>
-                    
-                              <label class="block mb-2 font-semibold">Tipo:</label>
-                              <select id="category-type" class="w-full border border-gray-300 p-2 rounded mb-2">
-                                  <option value="">Seleccione un tipo</option>
-                                  <option value="ingresos">Ingresos</option>
-                                  <option value="gastos">Gastos</option>
-                                  <option value="ahorros">Ahorros</option>
-                              </select>
-                              <span id="error-type" class="text-red-500 text-sm hidden">Debe seleccionar un tipo</span>
-                    
-                              <label class="block mb-2 font-semibold">Descripción (Opcional):</label>
-                              <textarea id="category-description" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Ingrese una descripción"></textarea>
-                    
-                              <div class="flex justify-end gap-2">
-                                  <button type="button" onclick="toggleModal()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer">Cancelar</button>
-                                  <button type="button" onclick="addCategory()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer">Guardar</button>
-                              </div>
-                          </form>
-                      </div>
+                    <label class="block mb-2 font-semibold">Tipo:</label>
+                    <select
+                      id="category-type"
+                      class="w-full border border-gray-300 p-2 rounded mb-2"
+                    >
+                      <option value="">Seleccione un tipo</option>
+                      <option value="ingresos">Ingresos</option>
+                      <option value="gastos">Gastos</option>
+                      <option value="ahorros">Ahorros</option>
+                    </select>
+                    <span id="error-type" class="text-red-500 text-sm hidden"
+                      >Debe seleccionar un tipo</span
+                    >
+
+                    <label class="block mb-2 font-semibold"
+                      >Descripción (Opcional):</label
+                    >
+                    <textarea
+                      id="category-description"
+                      class="w-full border border-gray-300 p-2 rounded mb-4"
+                      placeholder="Ingrese una descripción"
+                    ></textarea>
+
+                    <div class="flex justify-end gap-2">
+                      <button
+                        type="button"
+                        onclick="toggleModal()"
+                        class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        onclick="addCategory()"
+                        class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer"
+                      >
+                        Guardar
+                      </button>
                     </div>
+                  </form>
+                </div>
+              </div>
 
-                  <!-- Modal para Editar Categoría -->
-                  <div id="edit-modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden">
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
-                        <h3 class="text-xl font-bold mb-4">Editar Categoría</h3>
-                        <form>
-                            <label class="block mb-2 font-semibold">Nombre:</label>
-                            <input id="edit-category-name" type="text" class="w-full border border-gray-300 p-2 rounded mb-4">
-                            
-                            <label class="block mb-2 font-semibold">Tipo:</label>
-                            <input id="edit-category-index" type="hidden">
-                              <select id="edit-category-type" class="w-full border border-gray-300 p-2 rounded mb-4">
-                                <option value="ingresos">Ingresos</option>
-                                <option value="gastos">Gastos</option>
-                                <option value="ahorros">Ahorros</option>
-                              </select>
-                          
-                            <label class="block mb-2 font-semibold">Descripción:</label>
-                            <textarea id="edit-category-description" class="w-full border border-gray-300 p-2 rounded mb-4"></textarea>
-                            
-                            <div class="flex justify-end gap-2">
-                                <button type="button" onclick="toggleEditModal()" class="bg-gray-400 text-white px-4 py-2 rounded">Cancelar</button>
-                                <button type="button" onclick="saveEditedCategory()" class="bg-green-500 text-white px-4 py-2 rounded">Actualizar</button>
-                              </div>
-                        </form>
+              <!-- Modal para Editar Categoría -->
+              <div
+                id="edit-modal"
+                class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden"
+              >
+                <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+                  <h3 class="text-xl font-bold mb-4">Editar Categoría</h3>
+                  <form>
+                    <label class="block mb-2 font-semibold">Nombre:</label>
+                    <input
+                      id="edit-category-name"
+                      type="text"
+                      class="w-full border border-gray-300 p-2 rounded mb-4"
+                    />
+
+                    <label class="block mb-2 font-semibold">Tipo:</label>
+                    <input id="edit-category-index" type="hidden" />
+                    <select
+                      id="edit-category-type"
+                      class="w-full border border-gray-300 p-2 rounded mb-4"
+                    >
+                      <option value="ingresos">Ingresos</option>
+                      <option value="gastos">Gastos</option>
+                      <option value="ahorros">Ahorros</option>
+                    </select>
+
+                    <label class="block mb-2 font-semibold">Descripción:</label>
+                    <textarea
+                      id="edit-category-description"
+                      class="w-full border border-gray-300 p-2 rounded mb-4"
+                    ></textarea>
+
+                    <div class="flex justify-end gap-2">
+                      <button
+                        type="button"
+                        onclick="toggleEditModal()"
+                        class="bg-gray-400 text-white px-4 py-2 rounded"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        onclick="saveEditedCategory()"
+                        class="bg-green-500 text-white px-4 py-2 rounded"
+                      >
+                        Actualizar
+                      </button>
                     </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Modal de Confirmación para Eliminar Categoría -->
+
+              <div
+                id="delete-modal"
+                class="fixed inset-0 flex items-center justify-center bg-neutral-950/80 hidden"
+                onclick="toggleDeleteModal(event)"
+              >
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center"
+                  onclick="event.stopPropagation()"
+                >
+                  <h3 class="text-xl font-bold mb-4 text-red-600">
+                    Eliminar Categoría
+                  </h3>
+                  <p class="mb-6 text-gray-700">
+                    ¿Estás seguro de que deseas eliminar esta categoría? Esta
+                    acción no se puede deshacer.
+                  </p>
+
+                  <div class="flex justify-center gap-4">
+                    <button
+                      type="button"
+                      onclick="toggleDeleteModal()"
+                      class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer"
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      type="button"
+                      onclick="deleteCategory()"
+                      class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer"
+                    >
+                      Eliminar
+                    </button>
+                    <input type="hidden" id="delete-category-index" />
                   </div>
-
-                  <!-- Modal de Confirmación para Eliminar Categoría -->
-                 
-                  <div id="delete-modal" class="fixed inset-0 flex items-center justify-center bg-neutral-950/80  hidden" onclick="toggleDeleteModal(event)">
-                   
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-1/3 text-center" onclick="event.stopPropagation()">
-                        <h3 class="text-xl font-bold mb-4 text-red-600">Eliminar Categoría</h3>
-                        <p class="mb-6 text-gray-700">¿Estás seguro de que deseas eliminar esta categoría? Esta acción no se puede deshacer.</p>
-                        
-                        <div class="flex justify-center gap-4">
-                            <button type="button"  onclick="toggleDeleteModal()"  class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 cursor-pointer">Cancelar</button>
-                            <button type="button" onclick="deleteCategory()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer">Eliminar</button>
-                            <input type="hidden" id="delete-category-index">
-
-                          </div>
-                    </div>
-                  </div>
-
-
+                </div>
+              </div>
             </div>
-           </div>
-
+          </div>
         </main>
       </div>
     </div>
